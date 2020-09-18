@@ -107,7 +107,7 @@ function UploadVideoPage(props) {
                         fileName: response.data.fileName
                     }
                     setFilePath(response.data.filePath)
-
+                    console.log(FilePath);
                     //gerenate thumbnail with this filepath ! 
 
                     axios.post('/api/video/thumbnail', variable)
