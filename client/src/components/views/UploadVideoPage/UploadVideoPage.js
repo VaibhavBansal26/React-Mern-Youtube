@@ -152,7 +152,7 @@ function UploadVideoPage(props) {
 
                 {Thumbnail !== "" &&
                     <div>
-                        <img src={`http://localhost:5000/${Thumbnail}`} alt="haha" />
+                        <img src={`https://mern-youtube-vb.herokuapp.com/${Thumbnail}`} alt="haha" />
                     </div>
                 }
             </div>
