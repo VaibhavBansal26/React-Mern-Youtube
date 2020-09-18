@@ -48,7 +48,7 @@ function DetailVideoPage(props) {
             <Row>
                 <Col lg={18} xs={24} >
                     <div className="postPage" style={{ width: '100%', padding: '3rem 4em' }}>
-                    <video style={{ width: '100%',height:'500px'}} src={`http://localhost:5000/${Video.filePath}`} controls></video>
+                    <video style={{ width: '100%',height:'500px'}} src={`https://mern-youtube-vb.herokuapp.com/${Video.filePath}`} controls></video>
     
                     <List.Item
                         actions={[<LikeDislike video videoId={videoId}  userId={localStorage.getItem('userId')}/>,
