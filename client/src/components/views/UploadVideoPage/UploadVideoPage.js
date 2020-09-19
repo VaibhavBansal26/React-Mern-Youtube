@@ -62,7 +62,7 @@ function UploadVideoPage(props) {
 
         if (title === "" || Description === "" ||
             Categories === "" || FilePath === "" ||
-            Duration === "" || Thumbnail === "") {
+            Duration === "" ) {
             return alert('Please first fill all the fields')
         }
 
