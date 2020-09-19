@@ -131,6 +131,7 @@ function UploadVideoPage(props) {
                 console.log(err.response);
            });
             console.log(FilePath);
+            console.log(Thumbnail);
 
     }
     return (
