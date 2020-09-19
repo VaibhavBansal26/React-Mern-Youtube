@@ -49,25 +49,25 @@ router.post("/thumbnail", (req, res) => {
     let fileDuration="";
 
     ffmpeg.ffprobe(req.body.filePath,function(err,metadata){
-        console.dir(metadata);
-        console.log(metadata.format.duration);
+        // console.dir(metadata);
+        // console.log(metadata.format.duration);
 
         fileDuration = metadata.format.duration;
     })
 
     ffmpeg(req.body.filePath)
         .on('filenames', function(filenames) {
-            console.log('Will generate ' + filenames.join(', '))
-            thumbsFilePath = "uploads/thumbnails/"+filenames[0];
+            // console.log('Will generate ' + filenames.join(', '))
+            thumbsFilePath = "/uploads/thumbnails/"+filenames[0];
         })
         .on('end', function() {
-            console.log('Screenshots taken');
+            // console.log('Screenshots taken');
             return res.json({success:true,thumbsFilePath:thumbsFilePath,fileDuration:fileDuration})
         })
         .screenshots({
             // Will take screens at 20%, 40%, 60% and 80% of the video
             count: 3,
-            folder: 'uploads/thumbnails',
+            folder: '/uploads/thumbnails/',
             size:'320x240',
             filename:'thumbnail-%b.png'
         });

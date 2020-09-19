@@ -119,12 +119,14 @@ function UploadVideoPage(props) {
                                 alert('Failed to make the thumbnails');
                             }
                         })
+                        console.log(Thumbnail);
 
 
                 } else {
                     alert('failed to save the video in server')
                 }
             })
+            console.log(FilePath);
 
     }
     return (
