@@ -23,7 +23,8 @@ const connect = mongoose.connect(config.mongoURI,
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
-app.use(cors())
+app.use(cors());
+app.options('*',cors());
 
 //to not get any deprecation warning or error
 //support parsing of application/x-www-form-urlencoded post data
