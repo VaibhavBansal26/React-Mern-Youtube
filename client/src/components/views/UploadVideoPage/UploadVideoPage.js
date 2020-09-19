@@ -118,14 +118,18 @@ function UploadVideoPage(props) {
                             } else {
                                 alert('Failed to make the thumbnails');
                             }
-                        })
+                        }).catch(err=> {
+                            console.log(err.response);
+                       });
                         console.log(Thumbnail);
 
 
                 } else {
                     alert('failed to save the video in server')
                 }
-            })
+            }).catch(err=> {
+                console.log(err.response);
+           });
             console.log(FilePath);
 
     }
